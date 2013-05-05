@@ -1,13 +1,14 @@
 %html
   %head
     %title Lonely Planet UI Test
-    %link{rel: "stylesheet", href: 'css/style.css'}
-    %script{src: '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'}
-    %script{src: 'js/read-more.js'}
+    %link{:rel=> "stylesheet", :href=> 'css/style.css'}
+    %script{:src=> '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'}
+    %script{:src=> 'js/lp-library-min.js'}
+    %script{:src=> 'js/ui-test-min.js'}
+    %meta{:name=> 'viewport', :content=> 'width=device-width, initial-scale=1.0, maximum-scale=1.0'}
 
   %body
-    = haml :nav
+    %header
+      = haml :nav
     = yield
     = haml :footer
-
-    

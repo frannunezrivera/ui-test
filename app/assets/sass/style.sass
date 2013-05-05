@@ -1,124 +1,40 @@
+//Vars
+//Max Width to change layout
+$maxwidth: 1100px
+
+//Original Theme Colors
+$main-bg-color: #FFFFFF
+$main-font-color: #000000
+$navigation-bg-color: #124385
+$main-link-color: #FFFFFF
+$secondary-bg-color: #E5EBEE
+$secondary-link-color: #133944
+$button-bg-color: #1E344C
+$button-font-color: #FFFFFF
+
+//General
+
 body
+  background-color: $main-bg-color
+  color: $main-font-color
   font-family: Georgia
+  font-size: 1em
   padding: 0
   margin: 0
-
-.container
-  width: 1000px
-  margin: 0 auto
-
-.read-more-container
-  margin-top: 30px
-  height: 400px
-  overflow: hidden
-  line-height: 1.5
-  h2
-    margin-top: 20px
-    font-size: 16px
-    text-transform: uppercase
-    letter-spacing: 0.01em
 
 ul
   list-style: none
 
-// Logo
-
-.logo
-  position: absolute
-  left: 50%
-  margin-left: -41px
-  top: 9px
-
-// Buttons
-.button
-  background-color: #1E344C
-  padding: 10px
-  color: white
-  margin-top: 10px
-  text-decoration: none
-
-// Headings
-
 h1
-  font-size: 20px
+  font-size: 1.3em
 
 h3
-  font-size: 14px
-  color: #133944
+  font-size: 0.9em
+  color: $secondary-link-color
 
-
-// Image section
-
-.images-container
-  margin-top: 50px
-  overflow: hidden
-
-.first-image, .second-image, .third-image
-  float: left
-  width: 30%
-  margin-right: 5%
-  img
-    max-width: 100%
-
-.third-image
-  margin-right: 0
-
-.image-container
-  height: 150px
-  margin-bottom: 20px
-  overflow: hidden
-
-// Navigation
-
-.navigation
-  font-family: arial
-  text-align: center
-  background-color: #124385
-  ul
-    display: inline-block
-    height:  60px
-    margin: 0
-    li
-      display: inline-block
-      text-align: left
-      float: left
-      height: 60px
-      margin: 0
-      background-color: #124385
-      width: 150px
-      &:nth-child(3)
-        margin-right: 150px
-      a
-        color: white
-        text-decoration: none
-        line-height: 60px
-        padding: 0 15px
-        &:hover
-          text-decoration: underline
-
-.sub-navigation
-  font-family: arial
-  margin-bottom: 60px
-  text-align: center
-  background-color: #E5EBEE
-  ul
-    display: inline-block
-    height:  60px
-    margin: 0
-    padding: 0
-    li
-      float: left
-      height: 60px
-      width: auto
-      margin: 0
-      a
-        color: #133944
-        text-decoration: none
-        line-height: 60px
-        padding: 0 15px
-        &:hover
-          text-decoration: underline
-
+.container
+  width: 90%
+  margin: 0 auto
 
 // Lightbox
 .lightbox
@@ -133,21 +49,116 @@ h3
     left: 30%
     top: 30%
     border: 10px solid white
-  
+    width: 40%
+
+//Header
+header
+  .logo
+    position: absolute
+    left: 50%
+    margin-left: -41px
+    top: 9px
+  .navigation
+    font-family: arial
+    text-align: center
+    ul
+      display: inline-block
+      min-height:  60px
+      margin: 0
+      li
+        display: inline-block
+        float: left
+        min-height: 60px
+        margin: 0
+        a
+          text-decoration: none
+          line-height: 60px
+          padding: 0 15px
+          &:hover
+            text-decoration: underline
+    &.main-navigation
+      background-color: $navigation-bg-color
+      ul
+        li
+          text-align: left
+          min-width: 150px
+          &:nth-child(3)
+            margin-right: 150px
+          a
+            color: $main-link-color
+
+    &.sub-navigation
+      text-align: center
+      background-color: $secondary-bg-color
+      ul
+        li
+          width: auto
+          a
+            color: $secondary-link-color
+            padding: 0 15px
+
+
+//Body
+////Content
+
+section.container
+  .read-more-container
+    margin-top: 30px
+    height: 400px
+    overflow: hidden
+    line-height: 1.5
+    margin-bottom: 15px
+    padding-bottom: 20px
+    h2
+      margin-top: 20px
+      font-size: 1em
+      text-transform: uppercase
+      letter-spacing: 0.01em
+
+  .button
+    background-color: $button-bg-color
+    padding: 10px
+    color: #FFFFFF
+    margin-top: 10px
+    text-decoration: none
+
+
+////Image section
+
+section.images-container
+  margin-top: 50px
+  overflow: hidden
+
+  .first-image, .second-image, .third-image
+    float: left
+    width: 30%
+    margin-right: 5%
+    img
+      max-width: 100%
+      cursor: pointer
+
+  .third-image
+    margin-right: 0
+
+  .image-container
+    max-height: 150px
+    margin-bottom: 20px
+    overflow: hidden
 
 // Footer
 
 footer
   font-family: arial
   overflow: hidden
-  font-size: 12px
-  background-color: #E5EBEE
+  font-size: 0.8em
+  background-color: $secondary-bg-color
   margin-top: 50px
   padding-top: 20px
   nav
     float: left
     width: 25%
     margin-bottom: 20px
+    text-align: center
   h3
     text-transform: uppercase
     margin-bottom: 20px
@@ -160,12 +171,50 @@ footer
       padding: 10px 0
   a
     text-decoration: none
-    color: #1E344C
+    color: $secondary-link-color
     &:hover
       text-decoration: underline
 
+@media screen and (max-width: $maxwidth)
+  body
+    font-size: 0.7em
 
-
-
-
-
+  header
+    .logo
+      position: fixed
+      margin-left: 10
+      top: 3px
+      left: 0
+      width: 50px
+      z-index: 1
+    .navbar
+      position: fixed
+      top: 0  
+      width: 100%
+    .navigation
+      ul
+        li
+          min-height: 30px
+          min-width: 50px
+          a
+            line-height: 30px
+      &.main-navigation
+        ul
+          padding-left: 60px
+          min-height: 30px
+          li
+            min-width: 50px
+            &:nth-child(3)
+              margin-right: 0px
+      &.sub-navigation
+        margin-bottom: 30px
+        ul
+          min-height: 30px
+          padding: 0
+  section
+    &.container
+      margin-top: 100px
+  .image-container
+    min-height: 58px
+  .read-more-container
+    margin-top: 0px

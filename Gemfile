@@ -18,5 +18,4 @@ group 'assets' do
   gem 'guard-coffeescript'
   gem 'haml', '>= 3.0'
   gem 'sass' if RUBY_VERSION < "2.0"
-  gem 'coffee-script', '>= 2.0'
 end
