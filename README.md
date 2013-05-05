@@ -5,7 +5,8 @@ The purpose of this test is for you to show us how you would refactor some basic
 The code in this repo works fine and will render a webpage but would *not* scale. How you refactor it is entirely up to you. You can split up the files, remove libraries, add libraries, rewrite the structure completely if you wish.
 
 ===========================
-NOTE: 
+NOTE:
+
 TIME SPENT: It tooks me around 3 hours to complete this exercise.
 
 Nowadays, with the many mobile devices we have, I think it is very important to make your site responsive at least. So I centered my test in make the website responsive/rescalable and make it more reusable. You can resize the browser window and the content will fit!
@@ -15,6 +16,7 @@ Nowadays, with the many mobile devices we have, I think it is very important to 
 	-over 1100px
 
 -The width is configurable by a variable in the SASS file. 
+
 -Anyway, the content has to fit perfectly in any width.
 
 -I made the site themable too, then, changing a few vars you can change the colors of the site. Ideally I would splitted vars in another file: original-lp-theme.sass for example and I would have imported it. But i think is fair enough for this exercise.
@@ -35,6 +37,7 @@ NOTE:
 
 - I took the original html as a base and refactored it, adding new html5 tags to improve the website structure:
 	-NAV, ARTICLES, SECTIONS, HEADERS, FOOTERS...
+
 ===========================
 
 ## CSS
@@ -42,6 +45,7 @@ NOTE:
 - The css is written in Sass. It's ugly and has no real structure to it.
 - Refactor into a structure you would be happy with.
 - Comment on any decisions you have made that may be of interest.
+
 ===========================
 NOTE: 
 
@@ -50,6 +54,7 @@ NOTE:
 - I added variable to configure at wich width has to change the layout.
 - I made the top navigation bar fixed when its rendered for devices. Make sense that the user can always navigate while reading without return to the beggining of the website.
 - I made it responsive.
+
 ===========================
 
 
